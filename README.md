@@ -1,6 +1,6 @@
 # Smart Sunrise Project
 
-The Smart Sunrise project is a simple application that utilizes the NooLite library to simulate a sunrise by gradually adjusting the brightness level using a NooLite adapter. This project allows users to specify the COM port name and the desired duration for the sunrise, providing a customizable and automated way to create a gradual and natural wake-up experience.
+The Smart Sunrise project is a simple application that utilizes the NooLite library to simulate a sunrise by gradually adjusting the brightness level using a NooLite adapter. Is is designed to serve as a sunrise light alarm. The gradual increase in brightness mimics the natural sunrise, providing users with a gentle and effective wake-up experience. This project allows users to specify the COM port name and the desired duration for the sunrise, providing a customizable and automated way to create a gradual and natural wake-up experience.
 
 ## Table of Contents
 
@@ -11,6 +11,7 @@ The Smart Sunrise project is a simple application that utilizes the NooLite libr
   - [Command-line Arguments](#command-line-arguments)
 - [Automate Daily Sunrise Simulation](#automate-daily-sunrise-simulation)
 - [Configuration](#configuration)
+- [Plans](#plans)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -20,39 +21,44 @@ The Smart Sunrise project is a simple application that utilizes the NooLite libr
 
 Before running the Smart Sunrise application, make sure you have the following prerequisites installed:
 
-- .NET Core Runtime
+- .NET Core Runtime 7.0 or higher
 
 ### Installation
 
 1. Clone the repository to your local machine:
-
-   git clone https://github.com/novikov-alexander/smart-sunrise.git
-
+```
+   git clone https://github.com/novikov-alexander/SmartSunrise.git
+```
 2. Navigate to the project directory:
-
-   cd smart-sunrise
-
+```
+   cd SmartSunrise
+```
 3. Build the application:
-
+```
    dotnet build -c Release
-
+```
 ## Usage
 
 ### Command-line Arguments
 
 To run the Smart Sunrise application, use the following command-line syntax:
 
-dotnet SmartSunrise.dll <COMPortName> <SunriseDurationMinutes>
-<COMPortName>: The name of the COM port where the NooLite adapter is connected.
-<SunriseDurationMinutes>: The duration of the simulated sunrise in minutes.
+```
+SmartSunrise.exe <COMPortName> <SunriseDurationMinutes>
+```
+\<COMPortName\>: The name of the COM port where the NooLite adapter is connected.
+
+\<SunriseDurationMinutes\>: The duration of the simulated sunrise in minutes.
 
 Example:
-
-dotnet SmartSunrise.dll COM4 30
-
+```
+SmartSunrise.exe COM4 30
+```
 This command initiates a sunrise simulation on COM port COM4 with a duration of 30 minutes.
 
 ## Automate Daily Sunrise Simulation
+
+### Windows
 
 You can automate the sunrise simulation every day by scheduling the Smart Sunrise application using the Windows Task Scheduler. Follow these steps to set up the task:
 
@@ -88,8 +94,8 @@ You can automate the sunrise simulation every day by scheduling the Smart Sunris
 
    - In the "Program/script" field, enter the full path to your `dotnet.exe` and the full path to your Smart Sunrise DLL, like this:
      ```
-     Program/script: C:\Program Files\dotnet\dotnet.exe
-     Add arguments: path\to\SmartSunrise.dll COM4 30
+     Program/script: path\to\SmartSunrise.exe
+     Add arguments: COM4 30
      ```
    - Adjust the paths and command-line arguments based on your setup.
    - Click "Next" when you're done.
@@ -100,16 +106,25 @@ You can automate the sunrise simulation every day by scheduling the Smart Sunris
 Now, your task is scheduled to run your Smart Sunrise application every day at the specified time.
 
 Keep in mind:
-
-- Make sure to replace `C:\Program Files\dotnet\dotnet.exe` and `path\to\SmartSunrise.dll` with the actual paths on your system.
 - Adjust the COM port and sunrise duration in the command-line arguments as needed.
-- You might need to provide the full path to your `dotnet.exe` if it's not in the system's PATH environment variable.
 
 This setup will run your Smart Sunrise application daily at the specified time, simulating a sunrise according to the configured parameters.
+
+### Linux
+### MacOS
+
+TODO
 
 ## Configuration
 
 You can customize COM port name and sunrise duration via command line.
+
+## Plans
+
+- [ ] Add a feature to customize the sunrise pattern (e.g., different brightness curves).
+- [ ] Implement sunset simulation.
+- [ ] Add support for smart alarm integration (e.g. Sleep as Android).
+- [ ] Implement a configuration file for user preferences.
 
 ## Contributing
 
