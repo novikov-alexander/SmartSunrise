@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34310.174
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartSunrise", "SmartSunrise\SmartSunrise.csproj", "{837A7146-EC91-4479-A10F-C0E35A5644D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartSunrise.Tests", "SmartSunrise.Tests\SmartSunrise.Tests.csproj", "{494F1FD2-9CBE-49B7-A399-F0443E1AE427}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{837A7146-EC91-4479-A10F-C0E35A5644D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{837A7146-EC91-4479-A10F-C0E35A5644D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{837A7146-EC91-4479-A10F-C0E35A5644D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{494F1FD2-9CBE-49B7-A399-F0443E1AE427}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{494F1FD2-9CBE-49B7-A399-F0443E1AE427}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{494F1FD2-9CBE-49B7-A399-F0443E1AE427}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{494F1FD2-9CBE-49B7-A399-F0443E1AE427}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
