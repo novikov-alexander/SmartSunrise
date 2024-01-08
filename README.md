@@ -19,9 +19,12 @@ The Smart Sunrise project is a simple application that utilizes the NooLite libr
 
 ### Prerequisites
 
-Before running the Smart Sunrise application, make sure you have the following prerequisites installed:
+Before running the Smart Sunrise application, ensure that you have the following prerequisites:
 
+- A PC, router, or Raspberry Pi with USB support
 - .NET Core Runtime 7.0 or higher
+- A NooLite power block from the SU or SUF series
+- A NooLite MTRF-64-USB adapter bound to the power block
 
 ### Installation
 
@@ -122,9 +125,13 @@ You can customize COM port name and sunrise duration via command line.
 ## Plans
 
 - [ ] Add a feature to customize the sunrise pattern (e.g., different brightness curves).
+  - Research and analyze real lamp brightness changes during a sunrise simulation.
+  - Research and analyze sun brightness changes during a real sunrise.
 - [ ] Implement sunset simulation.
-- [ ] Add support for smart alarm integration (e.g. Sleep as Android).
+- [ ] Add support for smart alarm integration (e.g., Sleep as Android).
 - [ ] Implement a configuration file for user preferences.
+- [ ] Test the program on an OpenWRT router.
+- [ ] Test the program on a Raspberry Pi.
 
 ## Contributing
 
